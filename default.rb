@@ -11,7 +11,7 @@ apply "#{@template_path}/initial_setup.rb"
 
 apply_recipes [
   # Common
-  "cleanup"
+  "cleanup", "gem_groups"
 ]
 
 # Run bundler and callbacks
