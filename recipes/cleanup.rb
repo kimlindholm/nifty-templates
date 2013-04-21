@@ -1,0 +1,24 @@
+# >----------------------------------[ Cleanup ]----------------------------------<
+
+@current_recipe = "cleanup"
+@before_configs["cleanup"].call if @before_configs["cleanup"]
+say_recipe 'Cleanup'
+
+
+@configs[@current_recipe] = config
+
+%w{
+  README.rdoc
+  doc/
+  public/index.html
+  public/robots.txt
+  app/assets/images/rails.png
+}.each { |file| remove_file file }
+
+# Gemfile: remove commented lines and replace multiple blank lines with one
+gsub_file 'Gemfile', /#.*\n/, "\n"
+gsub_file 'Gemfile', /^[\s]*$\n/, "\n"
+
+# config/routes.rb: remove commented lines and replace multiple blank lines with one
+gsub_file 'config/routes.rb', /  #.*\n/, "\n"
+gsub_file 'config/routes.rb', /^[\s]*$\n/, "\n"
