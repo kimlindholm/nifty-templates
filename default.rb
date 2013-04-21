@@ -8,12 +8,14 @@ apply "#{@template_path}/initial_setup.rb"
 
 # Set default values or leave empty to be prompted
 @preferences = {
+  database: "postgresql", # "postgresql", "oracle", "mysql", "ibm_db" etc.
+  create_database: false,
   gemset: "1.9.3-p194@rails3.2"
 }
 
 apply_recipes [
   # Common
-  "cleanup", "gem_groups", "gemset"
+  "cleanup", "gem_groups", "gemset", "activerecord"
 ]
 
 # Run bundler and callbacks
