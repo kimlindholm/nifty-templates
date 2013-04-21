@@ -7,11 +7,13 @@
 apply "#{@template_path}/initial_setup.rb"
 
 # Set default values or leave empty to be prompted
-@preferences = {}
+@preferences = {
+  gemset: "1.9.3-p194@rails3.2"
+}
 
 apply_recipes [
   # Common
-  "cleanup", "gem_groups"
+  "cleanup", "gem_groups", "gemset"
 ]
 
 # Run bundler and callbacks
