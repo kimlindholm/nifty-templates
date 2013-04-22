@@ -11,16 +11,20 @@ if recipe?("activerecord")
   if @configs.key?("activerecord") && @configs["activerecord"].key?('database')
     @chosen_database = @configs["activerecord"]['database'];
     if @chosen_database == "postgresql"
-      say_wizard "Creating PostgreSQL user '#{app_name}'"
-      run "createuser #{app_name} --no-superuser --createdb --no-createrole"
+      begin
+        say_wizard "Creating PostgreSQL user '#{app_name}'"
+        run "createuser #{app_name} --no-superuser --createdb --no-createrole"
+      rescue StandardError
+        say_error "Unable to create PostgreSQL user"
+      end
     else
-      say_wizard "Database '#{@chosen_database}' was chosen, skipping " +
-                 "PostgreSQL user creation."
+      say_warning "Database '#{@chosen_database}' was chosen, skipping " +
+                  "PostgreSQL user creation."
     end
   else
-    say_wizard "Database not chosen, skipping PostgreSQL user creation. " +
-               "Hint: invoke ActiveRecord recipe first"
+    say_error "Database not chosen, skipping PostgreSQL user creation. " +
+              "Hint: invoke ActiveRecord recipe first"
   end
 else
-  say_wizard "ActiveRecord recipe not found, skipping PostgreSQL user creation"
+  say_error "ActiveRecord recipe not found, skipping PostgreSQL user creation"
 end
