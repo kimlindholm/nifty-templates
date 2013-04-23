@@ -10,12 +10,14 @@ apply "#{@template_path}/initial_setup.rb"
 @preferences = {
   database: "postgresql", # "postgresql", "oracle", "mysql", "ibm_db" etc.
   create_database: true,
-  gemset: "1.9.3-p194@rails3.2"
+  gemset: "1.9.3-p194@rails3.2",
+  unicorn_workers: 3
 }
 
 @recipes = [
   # Common
-  "cleanup", "gem_groups", "gemset", "activerecord", "postgres_user"
+  "cleanup", "gem_groups", "gemset", "activerecord", "postgres_user",
+  "unicorn"
 ]
 
 apply_recipes @recipes
