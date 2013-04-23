@@ -17,7 +17,7 @@ apply "#{@template_path}/initial_setup.rb"
 @recipes = [
   # Common
   "cleanup", "gem_groups", "gemset", "activerecord", "postgres_user",
-  "unicorn"
+  "unicorn", "gitignore"
 ]
 
 apply_recipes @recipes
