@@ -28,7 +28,7 @@ apply "#{@template_path}/initial_setup.rb"
   "rails-footnotes", "oink",
 
   # Testing
-  "rspec", "guard-spork", "guard-rspec", "deferred_gc"
+  "rspec", "guard-spork", "guard-rspec", "deferred_gc", "konacha"
 ]
 
 apply_recipes @recipes
