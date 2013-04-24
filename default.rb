@@ -20,7 +20,8 @@ apply "#{@template_path}/initial_setup.rb"
   "pow", "unicorn", "gitignore", "git",
 
   # Automation
-  "guard-bundler", "guard-pow", "guard-mozrepl", "guard-annotate"
+  "guard-bundler", "guard-pow", "guard-mozrepl", "guard-annotate",
+  "guard-yard"
 ]
 
 apply_recipes @recipes
