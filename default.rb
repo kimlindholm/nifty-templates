@@ -24,7 +24,7 @@ apply "#{@template_path}/initial_setup.rb"
   "guard-yard",
 
   # Performance and security
-  "guard-brakeman"
+  "guard-brakeman", "strong_parameters"
 ]
 
 apply_recipes @recipes
