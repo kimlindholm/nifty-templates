@@ -21,7 +21,10 @@ apply "#{@template_path}/initial_setup.rb"
 
   # Automation
   "guard-bundler", "guard-pow", "guard-mozrepl", "guard-annotate",
-  "guard-yard"
+  "guard-yard",
+
+  # Performance and security
+  "guard-brakeman"
 ]
 
 apply_recipes @recipes
