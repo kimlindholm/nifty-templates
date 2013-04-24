@@ -25,7 +25,10 @@ apply "#{@template_path}/initial_setup.rb"
 
   # Performance and security
   "guard-brakeman", "strong_parameters", "bullet", "rails_indexes",
-  "rails-footnotes", "oink"
+  "rails-footnotes", "oink",
+
+  # Testing
+  "rspec"
 ]
 
 apply_recipes @recipes
