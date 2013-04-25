@@ -37,7 +37,10 @@ apply "#{@template_path}/initial_setup.rb"
   "konacha-chai-matchers",
 
   # Code quality
-  "guard-rails_best_practices", "guard-jslint-on-rails", "simplecov"
+  "guard-rails_best_practices", "guard-jslint-on-rails", "simplecov",
+
+  # Deployment
+  "turbo-sprockets-rails3"
 ]
 
 apply_recipes @recipes
