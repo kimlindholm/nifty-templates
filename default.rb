@@ -33,7 +33,8 @@ apply "#{@template_path}/initial_setup.rb"
   "fakeweb",
 
   # Matchers
-  "shoulda-matchers", "email_spec", "api_matchers", "delayed_job_matcher"
+  "shoulda-matchers", "email_spec", "api_matchers", "delayed_job_matcher",
+  "konacha-chai-matchers"
 ]
 
 apply_recipes @recipes
