@@ -46,7 +46,7 @@ apply "#{@template_path}/initial_setup.rb"
   "turbo-sprockets-rails3", "closure-compiler", "heroku", "heroku_san",
 
   # Miscellaneous
-  "settingslogic", "figaro"
+  "settingslogic", "figaro", "nifty-generators"
 ]
 
 apply_recipes @recipes
