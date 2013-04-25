@@ -30,7 +30,10 @@ apply "#{@template_path}/initial_setup.rb"
   # Testing
   "rspec", "guard-spork", "guard-rspec", "deferred_gc", "konacha",
   "guard-konacha", "better_errors", "factory_girl_rails", "timecop",
-  "fakeweb"
+  "fakeweb",
+
+  # Matchers
+  "shoulda-matchers"
 ]
 
 apply_recipes @recipes
