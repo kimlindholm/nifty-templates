@@ -29,7 +29,7 @@ apply "#{@template_path}/initial_setup.rb"
 
   # Testing
   "rspec", "guard-spork", "guard-rspec", "deferred_gc", "konacha",
-  "guard-konacha"
+  "guard-konacha", "better_errors"
 ]
 
 apply_recipes @recipes
