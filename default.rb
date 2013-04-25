@@ -33,7 +33,7 @@ apply "#{@template_path}/initial_setup.rb"
   "fakeweb",
 
   # Matchers
-  "shoulda-matchers"
+  "shoulda-matchers", "email_spec"
 ]
 
 apply_recipes @recipes
