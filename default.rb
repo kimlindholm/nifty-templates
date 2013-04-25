@@ -43,7 +43,10 @@ apply "#{@template_path}/initial_setup.rb"
   "guard-rails_best_practices", "guard-jslint-on-rails", "simplecov",
 
   # Deployment
-  "turbo-sprockets-rails3", "closure-compiler", "heroku", "heroku_san"
+  "turbo-sprockets-rails3", "closure-compiler", "heroku", "heroku_san",
+
+  # Miscellaneous
+  "settingslogic"
 ]
 
 apply_recipes @recipes
