@@ -11,7 +11,10 @@ apply "#{@template_path}/initial_setup.rb"
   database: "postgresql", # "postgresql", "oracle", "mysql", "ibm_db" etc.
   create_database: true,
   gemset: "1.9.3-p194@rails3.2",
-  unicorn_workers: 3
+  unicorn_workers: 3,
+  heroku_name: "#{app_name}-#{create_random_number}",
+  heroku_ruby_version: "1.9.3",
+  heroku_staging: false
 }
 
 @recipes = [
@@ -40,7 +43,7 @@ apply "#{@template_path}/initial_setup.rb"
   "guard-rails_best_practices", "guard-jslint-on-rails", "simplecov",
 
   # Deployment
-  "turbo-sprockets-rails3", "closure-compiler"
+  "turbo-sprockets-rails3", "closure-compiler", "heroku"
 ]
 
 apply_recipes @recipes
