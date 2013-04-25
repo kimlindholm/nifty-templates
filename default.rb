@@ -34,7 +34,10 @@ apply "#{@template_path}/initial_setup.rb"
 
   # Matchers
   "shoulda-matchers", "email_spec", "api_matchers", "delayed_job_matcher",
-  "konacha-chai-matchers"
+  "konacha-chai-matchers",
+
+  # Code quality
+  "guard-rails_best_practices"
 ]
 
 apply_recipes @recipes
