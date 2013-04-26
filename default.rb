@@ -14,7 +14,8 @@ apply "#{@template_path}/initial_setup.rb"
   unicorn_workers: 3,
   heroku_name: "#{app_name}-#{create_random_number}",
   heroku_ruby_version: "1.9.3",
-  heroku_staging: false
+  heroku_staging: false,
+  doorcode: "12345"
 }
 
 @recipes = [
@@ -50,7 +51,7 @@ apply "#{@template_path}/initial_setup.rb"
   "growl", "request-log-analyzer", "transaction_retry", "sextant",
 
   # Rack middleware
-  "rack-mini-profiler", "rack-bug"
+  "rack-mini-profiler", "rack-bug", "door_code"
 ]
 
 apply_recipes @recipes
