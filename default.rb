@@ -51,7 +51,10 @@ apply "#{@template_path}/initial_setup.rb"
   "growl", "request-log-analyzer", "transaction_retry", "sextant",
 
   # Rack middleware
-  "rack-mini-profiler", "rack-bug", "door_code", "rack-throttle"
+  "rack-mini-profiler", "rack-bug", "door_code", "rack-throttle",
+
+  # Rake tasks
+  "rake_browser"
 ]
 
 apply_recipes @recipes
