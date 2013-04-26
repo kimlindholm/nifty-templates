@@ -47,7 +47,7 @@ apply "#{@template_path}/initial_setup.rb"
 
   # Miscellaneous
   "settingslogic", "figaro", "nifty-generators", "faker", "rails-erd",
-  "growl", "request-log-analyzer"
+  "growl", "request-log-analyzer", "transaction_retry"
 ]
 
 apply_recipes @recipes
