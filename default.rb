@@ -54,7 +54,7 @@ apply "#{@template_path}/initial_setup.rb"
   "rack-mini-profiler", "rack-bug", "door_code", "rack-throttle",
 
   # Rake tasks
-  "rake_browser", "rake_metrics"
+  "rake_browser", "rake_metrics", "rake_performance"
 ]
 
 apply_recipes @recipes
