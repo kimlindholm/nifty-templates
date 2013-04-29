@@ -15,7 +15,7 @@ apply "#{@template_path}/initial_setup.rb"
 
 @recipes = [
   # Code maintainability
-  "inherited_resources", "draper", "squeel", "pacecar",
+  "inherited_resources", "draper", "squeel", "pacecar", "link_to_action",
 
   # Commit to repository
   "git"
