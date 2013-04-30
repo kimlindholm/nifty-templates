@@ -18,7 +18,7 @@ apply "#{@template_path}/initial_setup.rb"
   "inherited_resources", "draper", "squeel", "pacecar", "link_to_action",
 
   # Performance and security
-  "valium", "oj", "memoist", "turbolinks",
+  "valium", "oj", "memoist", "turbolinks", "cache_digests",
 
   # Commit to repository
   "git"
