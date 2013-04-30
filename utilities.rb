@@ -22,7 +22,7 @@ apply "#{@template_path}/initial_setup.rb"
   "multi_fetch_fragments", "bust_rails_etags", "negative-captcha",
 
   # Miscellaneous
-  "marginalia",
+  "marginalia", "tries",
 
   # Commit to repository
   "git"
