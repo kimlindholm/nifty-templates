@@ -21,6 +21,9 @@ apply "#{@template_path}/initial_setup.rb"
   "valium", "oj", "memoist", "turbolinks", "cache_digests",
   "multi_fetch_fragments", "bust_rails_etags", "negative-captcha",
 
+  # Miscellaneous
+  "marginalia",
+
   # Commit to repository
   "git"
 ]
