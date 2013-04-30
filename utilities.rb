@@ -19,7 +19,7 @@ apply "#{@template_path}/initial_setup.rb"
 
   # Performance and security
   "valium", "oj", "memoist", "turbolinks", "cache_digests",
-  "multi_fetch_fragments",
+  "multi_fetch_fragments", "bust_rails_etags",
 
   # Commit to repository
   "git"
