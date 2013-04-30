@@ -17,6 +17,9 @@ apply "#{@template_path}/initial_setup.rb"
   # Code maintainability
   "inherited_resources", "draper", "squeel", "pacecar", "link_to_action",
 
+  # Performance and security
+  "valium",
+
   # Commit to repository
   "git"
 ]
