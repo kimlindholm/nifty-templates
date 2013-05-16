@@ -43,7 +43,7 @@ Here we used [Homebrew](http://mxcl.github.io/homebrew/) but any package manager
 
 Nifty Templates have been successfully tested with the following setup:
 
-* __Ruby:__ 1.9.3
+* __Ruby:__ 2.0.0, 1.9.3
 * __Rails:__ 3.2.13, 3.2.11
 * __Mac OS X__: 10.6.8
 * __Growl:__ 1.2.2
