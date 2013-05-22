@@ -8,9 +8,9 @@ say_recipe 'Guard Spork'
 @configs[@current_recipe] = config
 
 if recipe?("rspec")
-  gem 'rb-inotify', require: false, group: :test
-  gem 'rb-fsevent', require: false, group: :test
-  gem 'rb-fchange', require: false, group: :test
+  gem 'rb-inotify', require: false, group: [:development, :test]
+  gem 'rb-fsevent', require: false, group: [:development, :test]
+  gem 'rb-fchange', require: false, group: [:development, :test]
   gem 'guard-spork', '>= 0.3.2', group: :test
 
   after_bundler do
