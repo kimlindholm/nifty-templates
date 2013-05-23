@@ -49,6 +49,7 @@ apply "#{@template_path}/initial_setup.rb"
   # Miscellaneous
   "settingslogic", "figaro", "nifty-generators", "faker", "rails-erd",
   "growl", "request-log-analyzer", "transaction_retry", "sextant",
+  "quiet_assets",
 
   # Rack middleware
   "rack-mini-profiler", "rack-bug", "door_code", "rack-throttle",
