@@ -10,9 +10,9 @@ say_recipe 'marginalia'
 gem 'marginalia'
 
 grep_results = File.readlines("config/application.rb")
-               .grep(/require 'rails(.+)$/)
+               .grep(/require ('|")rails.+$/)
 if grep_results.any?
   inject_into_file "config/application.rb", after: grep_results.first do
-    "require 'marginalia/railtie'\n"
+    "require \"marginalia/railtie\"\n"
   end
 end
