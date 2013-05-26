@@ -34,7 +34,7 @@ apply "#{@template_path}/initial_setup.rb"
   # Testing
   "rspec", "guard-spork", "guard-rspec", "deferred_gc", "konacha",
   "guard-konacha", "better_errors", "factory_girl_rails", "timecop",
-  "fakeweb",
+  "zonebie", "fakeweb",
 
   # Matchers
   "shoulda-matchers", "email_spec", "api_matchers", "delayed_job_matcher",
