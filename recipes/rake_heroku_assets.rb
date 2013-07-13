@@ -11,7 +11,8 @@ say_recipe 'Rake - Heroku assets'
 
 @configs[@current_recipe] = config
 
-rakefile_contents = <<-TASK
+if recipe?("git") && recipe?("heroku")
+  rakefile_contents = <<-TASK
 namespace :heroku do
   desc "Precompile assets and push to Heroku #{@configs["heroku"]['staging'] ? 'staging ' : ''}server"
   task :assets do
@@ -23,7 +24,6 @@ namespace :heroku do
 end
 TASK
 
-if recipe?("git") && recipe?("heroku")
   rakefile "heroku_assets.rake", rakefile_contents
 else
   say_error "Both Git and Heroku need to be present, skipping"
