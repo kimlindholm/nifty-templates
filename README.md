@@ -84,6 +84,7 @@ You can use the repo directly or clone it locally:
 * __database__: ``"postgresql"``, ``"oracle"``, ``"mysql"``, ``"sqlite3"``, ``"frontbase"`` or ``"ibm_db"``
 * __create_database__: Create database automatically? ``true`` or ``false``
 * __unicorn_workers__: The amount of Unicorn worker processes, 2-4 are sensible defaults
+* __ruby_version__: If you're using RVM and want to force a specific Ruby version, define it here
 * __gemset__: If you're using RVM and want to force a specific gemset, define it here
 * __doorcode__: 3-6 digit PIN code to protect your app in production or staging, default is __*12345*__
 * __heroku_name__: App name in Heroku, default value attaches a random number, e.g. ``my-new-app-259``
