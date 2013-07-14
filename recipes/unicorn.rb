@@ -56,8 +56,18 @@ end
 after_fork do |server, worker|
   # Replace with MongoDB or whatever
   if defined?(ActiveRecord::Base)
-    ActiveRecord::Base.establish_connection
-    Rails.logger.info('Connected to ActiveRecord')
+
+    # Set DB reaping frequency and limit the connection pool
+    # (1-2 recommended by Heroku Dev Center).
+    # See https://devcenter.heroku.com/articles/concurrency-and-database-connections
+    config = Rails.application.config.database_configuration[Rails.env]
+    config['reaping_frequency'] = ENV['DB_REAP_FREQ'] || 10 # seconds
+    config['pool']              = ENV['DB_POOL'] || 2
+
+    ActiveRecord::Base.establish_connection(config)
+    Rails.logger.info("Connected to ActiveRecord (reaping every " +
+                      "\#{config['reaping_frequency']} sec, pool size " +
+                      "\#{config['pool']})")
   end
 
   # If you are using Redis but not Resque, change this
