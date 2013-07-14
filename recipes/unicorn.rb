@@ -21,10 +21,6 @@ end
 
 gem 'unicorn', '~> 4.5.0'
 
-# If you can't see logs on Heroku, try uncommenting these lines:
-# run 'mkdir -p vendor/plugins/rails_log_stdout'
-# run 'touch vendor/plugins/rails_log_stdout/keep_me'
-
 create_file "Procfile", <<-RUBY
 web: bundle exec unicorn -p $PORT -c ./config/unicorn.rb
 RUBY
@@ -77,3 +73,27 @@ after_fork do |server, worker|
   end
 end
 RUBY
+
+# If you can't see logs on Heroku, try uncommenting these lines:
+# run 'mkdir -p vendor/plugins/rails_log_stdout'
+# run 'touch vendor/plugins/rails_log_stdout/keep_me'
+
+text_to_add_configure = <<-RUBY
+  config.logger = Logger.new(STDOUT)
+  config.logger.level = Logger.const_get(
+    ENV['LOG_LEVEL'] ? ENV['LOG_LEVEL'].upcase : 'INFO'
+  )
+RUBY
+
+production_path = "config/environments/production.rb"
+
+if File.exist?(production_path)
+  grep_results = File.readlines(production_path).grep(/# config.logger.*$/)
+  if grep_results.any?
+    inject_into_file production_path, after: grep_results.first do
+      text_to_add_configure
+    end
+  end
+else
+  say_error "production.rb not found, Unicorn setup failed"
+end
