@@ -15,7 +15,8 @@ apply "#{@template_path}/initial_setup.rb"
 
 @recipes = [
   # Code maintainability
-  "inherited_resources", "draper", "squeel", "pacecar", "link_to_action",
+  "inherited_resources", "draper", "pundit", "squeel", "pacecar",
+  "link_to_action",
 
   # Performance and security
   "valium", "oj", "memoist", "turbolinks", "cache_digests",
