@@ -22,7 +22,7 @@ apply "#{@template_path}/initial_setup.rb"
 @recipes = [
   # Common
   "cleanup", "gem_groups", "gemset", "activerecord", "postgres_user",
-  "pow", "unicorn", "gitignore", "git",
+  "redis", "pow", "unicorn", "gitignore", "git",
 
   # Automation
   "guard-bundler", "guard-pow", "guard-mozrepl", "guard-annotate",
