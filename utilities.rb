@@ -20,7 +20,8 @@ apply "#{@template_path}/initial_setup.rb"
 
   # Performance and security
   "valium", "oj", "memoist", "turbolinks", "cache_digests",
-  "multi_fetch_fragments", "bust_rails_etags", "negative-captcha",
+  "multi_fetch_fragments", "bust_rails_etags", "secure_headers",
+  "negative-captcha",
 
   # Miscellaneous
   "marginalia", "tries",
