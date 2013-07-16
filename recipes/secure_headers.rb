@@ -46,5 +46,5 @@ if File.exist?(app_controller_path)
     end
   end
 else
-  say_error "application_controller.rb not found, Pundit setup failed"
+  say_error "application_controller.rb not found, SecureHeaders setup failed"
 end
