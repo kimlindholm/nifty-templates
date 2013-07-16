@@ -30,14 +30,9 @@ The [default template](default.rb) installs gems that I rarely start a Rails pro
 
 Depending on the recipes you intend to use, you may need to have these installed (some commands are OS X specific):
 
-    gem install request-log-analyzer
-    gem install reek
-    gem install heroku
-    gem install powder
-    powder install
-    brew install graphviz
-    brew install imagemagick
-    brew install phantomjs
+    gem install request-log-analyzer reek
+    gem install powder && powder install
+    brew install graphviz imagemagick phantomjs
 
 Here we used [Homebrew](http://mxcl.github.io/homebrew/) but any package manager will do.
 
