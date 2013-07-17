@@ -24,12 +24,12 @@ unless Rails.env.in?(%w[development test])
       enforce: true,
       default_src: "https://* inline eval",
       # report_uri: '//example.com/uri-directive',
-      img_src: "https://* data: *.example.com *.cloudfront.net",
+      img_src: "https://* data: *.herokuapp.com *.cloudfront.net",
       frame_src: "https://* http://*.twimg.com http://itunes.apple.com",
       connect_src: "self",
-      font_src: "data: *.example.com *.cloudfront.net themes.googleusercontent.com",
-      style_src: "inline *.example.com *.cloudfront.net fonts.googleapis.com",
-      script_src: "inline eval *.example.com *.cloudfront.net *.newrelic.com"
+      font_src: "data: *.herokuapp.com *.cloudfront.net themes.googleusercontent.com",
+      style_src: "inline *.herokuapp.com *.cloudfront.net fonts.googleapis.com",
+      script_src: "inline eval *.herokuapp.com *.cloudfront.net *.newrelic.com"
   }
   end
 end
