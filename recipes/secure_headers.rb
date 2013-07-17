@@ -14,7 +14,7 @@ RUBY
 gem 'secure_headers'
 
 initializer "secure_headers.rb", <<-RUBY
-unless Rails.env.in?("development", "test")
+unless Rails.env.in?(%w[development test])
   ::SecureHeaders::Configuration.configure do |config|
     config.hsts = {max_age: 99, include_subdomains: true}
     config.x_frame_options = 'DENY'

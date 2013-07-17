@@ -20,7 +20,7 @@ private
 
   def miniprofiler
     # Add if needed: if !@current_user.nil? && @current_user.admin?
-    if Rails.env.in?("development", "staging") && defined? Rack::MiniProfiler
+    if Rails.env.in?(%w[development staging]) && defined? Rack::MiniProfiler
       Rack::MiniProfiler.authorize_request
     end
   end
