@@ -33,8 +33,7 @@ apply "#{@template_path}/initial_setup.rb"
 
   # Testing
   "rspec", "guard-spork", "guard-rspec", "deferred_gc", "konacha",
-  "guard-konacha", "better_errors", "factory_girl_rails", "timecop",
-  "zonebie", "fakeweb",
+  "guard-konacha", "factory_girl_rails", "timecop", "zonebie", "fakeweb",
 
   # Matchers
   "shoulda-matchers", "email_spec", "api_matchers", "delayed_job_matcher",
@@ -44,7 +43,7 @@ apply "#{@template_path}/initial_setup.rb"
   "guard-rails_best_practices", "guard-jslint-on-rails", "simplecov",
 
   # Deployment
-  "closure-compiler", "heroku", "heroku_san",
+  "heroku", "heroku_san",
 
   # Miscellaneous
   "settingslogic", "figaro", "faker", "rails-erd", "growl",
