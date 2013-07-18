@@ -19,11 +19,11 @@ apply "#{@template_path}/initial_setup.rb"
   "link_to_action",
 
   # Performance and security
-  "valium", "oj", "memoist", "multi_fetch_fragments", "bust_rails_etags",
+  "oj", "memoist", "multi_fetch_fragments", "bust_rails_etags",
   "secure_headers", "negative-captcha",
 
   # Miscellaneous
-  "marginalia", "tries",
+  "tries",
 
   # Commit to repository
   "git"

@@ -47,11 +47,11 @@ apply "#{@template_path}/initial_setup.rb"
   "closure-compiler", "heroku", "heroku_san",
 
   # Miscellaneous
-  "settingslogic", "figaro", "nifty-generators", "faker", "rails-erd",
-  "growl", "request-log-analyzer", "transaction_retry", "quiet_assets",
+  "settingslogic", "figaro", "faker", "rails-erd", "growl",
+  "request-log-analyzer", "quiet_assets",
 
   # Rack middleware
-  "rack-mini-profiler", "rack-bug", "door_code", "rack-throttle",
+  "rack-mini-profiler", "door_code", "rack-throttle",
 
   # Rake tasks
   "rake_browser", "rake_metrics", "rake_performance", "rake_heroku_assets"

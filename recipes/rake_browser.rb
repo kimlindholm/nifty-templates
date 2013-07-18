@@ -18,7 +18,6 @@ namespace :app do
                " http://#{app_name}.dev:3500" +
                " http://#{app_name}.dev/metrics" +
                " http://#{app_name}.dev/performance.html" +
-               " http://#{app_name}.dev/__rack_bug__/bookmarklet.html" +
                " http://doc.dev:8000/docs/frames/"
   end
 end

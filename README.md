@@ -109,7 +109,6 @@ Here's my workflow on OS X using Pow and Heroku.
     * ``http://my-new-app.dev:3500`` (JavaScript tests)
     * ``http://my-new-app.dev/metrics`` (Rails Best Practices report)
     * ``http://my-new-app.dev/performance.html`` (Request-log-analyzer report)
-    * ``http://my-new-app.dev/__rack_bug__/bookmarklet.html`` (Toggle Rack::Bug diagnostics)
     * ``http://doc.dev:8000/docs/frames/`` (YARD documentation)
 
 5. Two of the tabs are initially empty. Create a Rails Best Practices report with ``rake app:metrics`` and Request-log-analyzer report with ``rake app:performance``.
