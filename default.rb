@@ -10,8 +10,8 @@ apply "#{@template_path}/initial_setup.rb"
 @preferences = {
   database: "postgresql", # "postgresql", "oracle", "mysql", "ibm_db" etc.
   create_database: true,
-  ruby_version: "ruby-2.0.0-p0",
-  gemset: "rails3.2",
+  ruby_version: "ruby-2.0.0",
+  gemset: "rails4.0",
   unicorn_workers: 3,
   heroku_name: "#{app_name}-#{create_random_number}",
   heroku_ruby_version: "2.0.0",
