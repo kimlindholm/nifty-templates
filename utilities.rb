@@ -19,9 +19,8 @@ apply "#{@template_path}/initial_setup.rb"
   "link_to_action",
 
   # Performance and security
-  "valium", "oj", "memoist", "turbolinks", "cache_digests",
-  "multi_fetch_fragments", "bust_rails_etags", "secure_headers",
-  "negative-captcha",
+  "valium", "oj", "memoist", "multi_fetch_fragments", "bust_rails_etags",
+  "secure_headers", "negative-captcha",
 
   # Miscellaneous
   "marginalia", "tries",
