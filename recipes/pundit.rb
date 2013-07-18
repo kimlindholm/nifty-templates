@@ -29,7 +29,7 @@ after_bundler do
         .grep(/class ApplicationController.*$/)
     if grep_results.any?
       inject_into_file app_controller_path, after: grep_results.first do
-        text_to_add_app_controller
+        "#{text_to_add_app_controller}\n"
       end
     end
   else

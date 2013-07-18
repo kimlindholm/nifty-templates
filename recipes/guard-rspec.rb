@@ -8,7 +8,7 @@ say_recipe 'Guard RSpec'
 @configs[@current_recipe] = config
 
 if recipe?("rspec")
-  gem 'guard-rspec', '>= 0.5.5', :group => [:development, :test]
+  gem 'guard-rspec', group: [:development, :test]
 
   after_bundler do
     if recipe?("guard-spork") && !File.exist?("Guardfile")

@@ -19,7 +19,7 @@ end
 
 @configs[@current_recipe] = config
 
-gem 'unicorn', '~> 4.5.0'
+gem 'unicorn', '~> 4.6.0'
 
 create_file "Procfile", <<-RUBY
 web: bundle exec unicorn -p $PORT -c ./config/unicorn.rb

@@ -9,16 +9,15 @@ say_recipe 'Cleanup'
 
 %w{
   README.rdoc
-  doc/
-  public/index.html
   public/robots.txt
-  app/assets/images/rails.png
 }.each { |file| remove_file file }
 
 # Gemfile: remove commented lines and replace multiple blank lines with one
-gsub_file 'Gemfile', /#.*\n/, "\n"
+gsub_file 'Gemfile', /#.*\n/, ""
 gsub_file 'Gemfile', /^[\s]*$\n/, "\n"
+gsub_file 'Gemfile', /\n\ngem/, "\ngem"
+gsub_file 'Gemfile', /^gem 'rails'/, "\ngem 'rails'"
 
 # config/routes.rb: remove commented lines and replace multiple blank lines with one
-gsub_file 'config/routes.rb', /  #.*\n/, "\n"
+gsub_file 'config/routes.rb', /  #.*\n/, ""
 gsub_file 'config/routes.rb', /^[\s]*$\n/, "\n"

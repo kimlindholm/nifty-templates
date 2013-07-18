@@ -7,7 +7,7 @@ say_recipe 'Arcane'
 
 @configs[@current_recipe] = config
 
-gem "arcane", "~> 1.0.0"
+gem 'arcane', '~> 1.1.0'
 
 initializer "arcane.rb", <<-RUBY
 ApplicationController.send :include, Arcane

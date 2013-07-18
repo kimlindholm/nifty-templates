@@ -7,7 +7,7 @@ say_recipe 'Redis'
 
 @configs[@current_recipe] = config
 
-gem 'redis-rails'
+gem 'redis-rails', github: 'Lukom/redis-store'
 
 say_wizard "Generating Redis initializer..."
 

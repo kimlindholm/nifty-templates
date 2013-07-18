@@ -7,5 +7,4 @@ say_recipe 'Rails Indexes'
 
 @configs[@current_recipe] = config
 
-gem 'rails_indexes', git: 'https://github.com/warpc/rails_indexes',
-                     group: :development
+gem 'rails_indexes', github: 'warpc/rails_indexes', group: :development

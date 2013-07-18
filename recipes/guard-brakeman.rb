@@ -7,8 +7,6 @@ say_recipe 'Guard Brakeman'
 
 @configs[@current_recipe] = config
 
-gem 'brakeman', git: 'https://github.com/presidentbeef/brakeman',
-                group: :development
 gem 'guard-brakeman', group: :development
 
 run 'mkdir -p public/brakeman'

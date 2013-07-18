@@ -11,7 +11,8 @@ if recipe?("rspec")
   gem 'rb-inotify', require: false, group: [:development, :test]
   gem 'rb-fsevent', require: false, group: [:development, :test]
   gem 'rb-fchange', require: false, group: [:development, :test]
-  gem 'guard-spork', '>= 0.3.2', group: :test
+  gem 'spork-rails', github: 'sporkrb/spork-rails'
+  gem 'guard-spork', group: :test
 
   after_bundler do
     if File.exist?(".rspec")

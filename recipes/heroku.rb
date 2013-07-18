@@ -28,6 +28,9 @@ end
 
 @configs[@current_recipe] = config
 
+# See https://devcenter.heroku.com/articles/rails4#logging-and-assets
+gem 'rails_12factor', group: :production
+
 application_path = "config/application.rb"
 
 # Skip connecting to the database while precompiling assets on Heroku

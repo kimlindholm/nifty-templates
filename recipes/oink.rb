@@ -7,7 +7,7 @@ say_recipe 'Oink'
 
 @configs[@current_recipe] = config
 
-gem 'oink', '~> 0.9.3', group: :development
+gem 'oink', group: :development
 
 capitalized_name = app_name.titleize.gsub(/\s+/, '')
 
