@@ -1,7 +1,9 @@
-Nifty Templates
+Nifty Templates (Rails 3.2)
 ===============
 
 A collection of templates to DRY up your Rails project creation.
+
+**This is an unmaintained Rails 3.2 branch. [Click here for Rails 4 branch.](https://github.com/kimlindholm/nifty-templates)**
 
 ## Description
 
@@ -50,7 +52,7 @@ If you're having problems, first check that your database is up and running. Sec
 
 You can use the repo directly or clone it locally:
 
-    git clone https://github.com/kimlindholm/nifty-templates.git
+    git clone -b rails3.2 https://github.com/kimlindholm/nifty-templates.git
 
 ## Usage
 
