@@ -44,6 +44,8 @@ Nifty Templates have been successfully tested with the following setup:
 * __Growl:__ 1.2.2
 * __Heroku stack:__ Cedar
 
+There is also a [Rails 3.2 branch](https://github.com/kimlindholm/nifty-templates/tree/rails3.2) for those interested.
+
 If you're having problems, first check that your database is up and running. Secondly, if you use [Growl](http://growl.info/) and your version differs from mine, you'll need to edit the recipe accordingly (I had to lock the gem version on my system).
 
 ## Installation
