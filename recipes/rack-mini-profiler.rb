@@ -14,7 +14,7 @@ say_recipe 'Rack::MiniProfiler'
 gem 'rack-mini-profiler', group: :development
 
 text_to_add = <<-RUBY
-  before_filter :miniprofiler
+  before_action :miniprofiler
 
 private
 
